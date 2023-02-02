@@ -26,6 +26,8 @@
     <MASM Include="P_4_LeerDatosConsola.asm" />
     <MASM Include="P_5_ImprimeCadenenconsola.asm" />
     <MASM Include="P_6_Op_SUB_.asm" />
+    <MASM Include="P_7_Multiplicacion_.asm" />
+    <MASM Include="P_8_Division_.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
@@ -105,7 +107,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main6</EntryPointSymbol>
+      <EntryPointSymbol>main8</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>

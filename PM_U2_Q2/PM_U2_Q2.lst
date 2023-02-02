@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    01/31/23 20:40:40
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/01/23 20:42:22
 NombreProgram						     Page 1 - 1
 
 
@@ -37,52 +37,52 @@ Microsoft (R) Macro Assembler Version 14.29.30133.0	    01/31/23 20:40:40
 				; Área de Declaración de Variables
 
 
- 00000000 0000000A		var1_6 dword 10d
+ 00000000 00000002		var1_8 dword 2d
 
  00000000			.code
 
- 00000000				main6 PROC
+ 00000000				main8 PROC
 					
 						;Lógica del Programa
 
-				         ;sub se rige por las mismas restricciones que mov
-						 ; en cuanto a los operandos
+							;La division siempre debe realizarse entre eax y un operando
+							; el cociente se almacena en eax
+							; el residuo se almacena en edx
+							;
+							; Se recomienda limpiar el registro edx siempre que se vaya a realizar una division
+							;
+							;EJEMPLO 1
+ 00000000  B8 0000000A					mov eax , 10
 
-						 ; mem a reg a la memria se le resta el registro
-						 ; reg a mem
-						 ; reg a reg
-						 ; reg/mem a inm
-						 ;//ejemplo 1
- 00000000  B8 00000004				 mov eax, 4
+ 00000005  BA 00000000					mov edx , 0 ; limpienza del registro
 
- 00000005  29 05 00000000 R			 sub var1_6, eax ; destino = destino - origen ; 10-  4 = 6
+ 0000000A  F7 35 00000000 R				div var1_8 ; eax = 10 / 2 
 
- 0000000B  2B 05 00000000 R			 sub eax, var1_6 ; eax = 4-6
 
-						; FD + 1 = -2
-					
- 00000011  E8 00000000 E			call writeint
+ 00000010  E8 00000000 E				call writeint
+ 00000015  E8 00000000 E				call crlf
 
-						;//ejemplo 3
- 00000016  E8 00000000 E			call crlf ; salto de linea
- 0000001B  BB 00000008				mov ebx, 8
- 00000020  2B D8				sub ebx, eax   ; ebx = 8 - (-2)
+							;Ejemplo 2 
+ 0000001A  B8 00000009					mov eax , 9
+ 0000001F  BA 00000000					mov edx , 0
+ 00000024  F7 35 00000000 R				div var1_8 ; cociente = eax residuo = edx
+ 0000002A  E8 00000000 E				call writeint 
+ 0000002F  E8 00000000 E				call crlf
 
- 00000022  8B C3				mov eax, ebx
+							;call crlf
+							;mov eax , edx ; sobreescribir el cociente
+ 00000034  92						xchg eax , edx ; intercambia el valor de los registro ; opcion 2
+ 00000035  E8 00000000 E				call writeint
 
- 00000024  E8 00000000 E			call writedec
+							
 
-						;//ejemplo 4
- 00000029  E8 00000000 E			call crlf
- 0000002E  83 E8 03				sub eax, 3
- 00000031  E8 00000000 E			call writedec
 
 						exit	
 					
- 0000003D				main6 ENDP
+ 00000041				main8 ENDP
 					
-					END main6
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    01/31/23 20:40:40
+					END main8
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/01/23 20:42:22
 NombreProgram						     Symbols 2 - 1
 
 
@@ -177,7 +177,7 @@ Segments and Groups:
 FLAT . . . . . . . . . . . . . .	GROUP
 STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
 _DATA  . . . . . . . . . . . . .	32 Bit	 00000004 Para	  Public  'DATA'	
-_TEXT  . . . . . . . . . . . . .	32 Bit	 0000003D Para	  Public  'CODE'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000041 Para	  Public  'CODE'	
 
 
 Procedures, parameters, and locals:
@@ -284,7 +284,7 @@ WriteStackFrame  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External
 WriteString  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteToFile  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteWindowsMsg  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
-main6  . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000003D Public STDCALL
+main8  . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000041 Public STDCALL
 printf . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 scanf  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 wsprintfA  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
@@ -518,7 +518,7 @@ lightMagenta . . . . . . . . . .	Number	 0000000Dh
 lightRed . . . . . . . . . . . .	Number	 0000000Ch   
 magenta  . . . . . . . . . . . .	Number	 00000005h   
 red  . . . . . . . . . . . . . .	Number	 00000004h   
-var1_6 . . . . . . . . . . . . .	DWord	 00000000 _DATA	
+var1_8 . . . . . . . . . . . . .	DWord	 00000000 _DATA	
 white  . . . . . . . . . . . . .	Number	 0000000Fh   
 wsprintf . . . . . . . . . . . .	Text   	 wsprintfA
 yellow . . . . . . . . . . . . .	Number	 0000000Eh   
