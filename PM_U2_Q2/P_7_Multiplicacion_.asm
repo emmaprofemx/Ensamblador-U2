@@ -56,6 +56,7 @@ var1_7 dword 10d
 		  ;mul 5 ; es una operacion incompleta
 
 
+
 		exit	
 	
 	main7 ENDP

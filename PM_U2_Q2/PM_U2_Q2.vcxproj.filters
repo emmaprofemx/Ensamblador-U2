@@ -10,6 +10,7 @@
     <MASM Include="P_6_Op_SUB_.asm" />
     <MASM Include="P_7_Multiplicacion_.asm" />
     <MASM Include="P_8_Division_.asm" />
+    <MASM Include="P_9_EcuacionLineaRecta.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
