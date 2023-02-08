@@ -11,6 +11,7 @@
     <MASM Include="P_7_Multiplicacion_.asm" />
     <MASM Include="P_8_Division_.asm" />
     <MASM Include="P_9_EcuacionLineaRecta.asm" />
+    <MASM Include="P_10_Promedio5Numeros.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
