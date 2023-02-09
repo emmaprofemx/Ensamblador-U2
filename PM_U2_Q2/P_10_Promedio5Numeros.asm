@@ -4,8 +4,8 @@ TITLE NombrePrograma
 ;Objetivo: Archivo de Ejemplo
 ;
 ; Autore(s):
-;         Apellido Nombre Integrante 1
-;         Apellido Nombre Integrante 2
+;         Luna Sanchez Juan Pablo.
+;         Ruiz Garcia Emmanuel Alejandro.
 
 ; Semestre: 8vo Semestre ISC 
 ;FIN DESCRPICIÓN

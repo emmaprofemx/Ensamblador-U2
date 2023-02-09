@@ -21,6 +21,8 @@
   <ItemGroup>
     <MASM Include="P_0_plantilla.asm" />
     <MASM Include="P_10_Promedio5Numeros.asm" />
+    <MASM Include="P_11_AreaRectangulo_.asm" />
+    <MASM Include="P_12_IntroSaltosIncondicionales_.asm" />
     <MASM Include="P_1_TransferenciaDatos.asm" />
     <MASM Include="P_2_IntroOpArit.asm" />
     <MASM Include="P_3_EscrituraEnPantalla.asm" />
@@ -109,7 +111,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main10</EntryPointSymbol>
+      <EntryPointSymbol>main12</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>
