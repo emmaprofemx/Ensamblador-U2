@@ -1,6 +1,6 @@
 # Ensamblador-U2
 
-Codigos de la Unidad 1:
+Codigos de la Unidad 2:
 * [EJ1-TransferenciaDatos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_1_TransferenciaDatos.asm)
 
 Practicas hechas en clase: 
