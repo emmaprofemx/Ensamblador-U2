@@ -112,7 +112,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main13</EntryPointSymbol>
+      <EntryPointSymbol>main11</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>
