@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/08/23 20:42:42
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/09/23 20:51:18
 NombreProgram						     Page 1 - 1
 
 
@@ -35,46 +35,65 @@ Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/08/23 20:42:42
 
  00000000			.data
 				; Área de Declaración de Variables
- 00000000 4D 65 6E 73 61	message1_12 db "Mensaje 1",0 
+ 00000000 4D 65 6E 73 61	message1_13 db "Mensaje 1",0 
 	   6A 65 20 31 00
- 0000000A 4D 65 6E 73 61	message2_12 db "Mensaje 2" , 0
+ 0000000A 4D 65 6E 73 61	message2_13 db "Mensaje 2", 0 
 	   6A 65 20 32 00
- 00000014 4D 65 6E 73 61	message3_12 db "Mensaje 3 ",0
-	   6A 65 20 33 20
-	   00
+ 00000014 4D 65 6E 73 61	message3_13 db "Mensaje 3",0 
+	   6A 65 20 33 00
 
 
  00000000			.code
 
- 00000000				main12 PROC
+ 00000000				main13 PROC
 					
 						;Lógica del Programa
+						
+						;Desplegaremos el mensaje 2, solo cuando el valor leido sea 1
 
- 00000000  BA 00000000 R			mov edx, offset message1_12
- 00000005  E8 00000000 E			call writestring
- 0000000A  E8 00000000 E			call crlf
+ 00000000  E8 00000000 E			call readint; lee un numero y lo almacena en eax
 
- 0000000F  EB 0F				jmp continuar; salto incondicional
+ 00000005  BA 00000000 R			mov edx, offset message1_13
+ 0000000A  E8 00000000 E			call writestring
+ 0000000F  E8 00000000 E			call crlf
 
- 00000011  BA 0000000A R			mov edx, offset message2_12
- 00000016  E8 00000000 E			call writestring
- 0000001B  E8 00000000 E			call crlf
+ 00000014  E8 00000000 E			call dumpregs ; volcado de registros
 
- 00000020			continuar: ;etiqueta
+ 00000019  83 F8 01				cmp eax, 1; compara si eax es 1 ---> las reglas de comparacion respetan las usadas por
+						; cmp compara a traves de una resta que despues de realizarse se deshace
+						;pero si altera a la registro de banderas
+
+ 0000001C  E8 00000000 E			call dumpregs ; volcado de registros
 
 
- 00000020  BA 00000014 R			mov edx, offset message3_12
- 00000025  E8 00000000 E			call writestring
- 0000002A  E8 00000000 E			call crlf
+ 00000021  74 02				jz soniguales; jump IF is zero; salta si es cero
+						; realiza el salto a la localidad de la etiqueta, si la bandera de zero esta activa
+						; la bandera de zero se activa, si la comparacion es entre dos numeros iguales
+						
+ 00000023  EB 0F				jmp continuar; salto condicional
+
+ 00000025					soniguales:
+						
+ 00000025  BA 0000000A R			    mov edx, offset message2_13
+ 0000002A  E8 00000000 E			    call writestring
+ 0000002F  E8 00000000 E			    call crlf
+
+
+				       
+ 00000034					continuar: ;etiqueta
+
+ 00000034  BA 00000014 R			mov edx, offset message3_13
+ 00000039  E8 00000000 E			call writestring
+ 0000003E  E8 00000000 E			call crlf
 
 						
 					
 						exit	
 					
- 00000036				main12 ENDP
+ 0000004A				main13 ENDP
 					
-					END main12
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/08/23 20:42:42
+					END main13
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/09/23 20:51:18
 NombreProgram						     Symbols 2 - 1
 
 
@@ -168,8 +187,8 @@ Segments and Groups:
 
 FLAT . . . . . . . . . . . . . .	GROUP
 STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
-_DATA  . . . . . . . . . . . . .	32 Bit	 0000001F Para	  Public  'DATA'	
-_TEXT  . . . . . . . . . . . . .	32 Bit	 00000036 Para	  Public  'CODE'	
+_DATA  . . . . . . . . . . . . .	32 Bit	 0000001E Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000004A Para	  Public  'CODE'	
 
 
 Procedures, parameters, and locals:
@@ -276,8 +295,9 @@ WriteStackFrame  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External
 WriteString  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteToFile  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteWindowsMsg  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
-main12 . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000036 Public STDCALL
-  continuar  . . . . . . . . . .	L Near	 00000020 _TEXT	
+main13 . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000004A Public STDCALL
+  soniguales . . . . . . . . . .	L Near	 00000025 _TEXT	
+  continuar  . . . . . . . . . .	L Near	 00000034 _TEXT	
 printf . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 scanf  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 wsprintfA  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
@@ -510,9 +530,9 @@ lightGreen . . . . . . . . . . .	Number	 0000000Ah
 lightMagenta . . . . . . . . . .	Number	 0000000Dh   
 lightRed . . . . . . . . . . . .	Number	 0000000Ch   
 magenta  . . . . . . . . . . . .	Number	 00000005h   
-message1_12  . . . . . . . . . .	Byte	 00000000 _DATA	
-message2_12  . . . . . . . . . .	Byte	 0000000A _DATA	
-message3_12  . . . . . . . . . .	Byte	 00000014 _DATA	
+message1_13  . . . . . . . . . .	Byte	 00000000 _DATA	
+message2_13  . . . . . . . . . .	Byte	 0000000A _DATA	
+message3_13  . . . . . . . . . .	Byte	 00000014 _DATA	
 red  . . . . . . . . . . . . . .	Number	 00000004h   
 white  . . . . . . . . . . . . .	Number	 0000000Fh   
 wsprintf . . . . . . . . . . . .	Text   	 wsprintfA

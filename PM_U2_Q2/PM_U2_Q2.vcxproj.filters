@@ -14,6 +14,7 @@
     <MASM Include="P_10_Promedio5Numeros.asm" />
     <MASM Include="P_11_AreaRectangulo_.asm" />
     <MASM Include="P_12_IntroSaltosIncondicionales_.asm" />
+    <MASM Include="P_13_SaltosCondicionales.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
