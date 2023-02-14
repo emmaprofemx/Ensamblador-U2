@@ -24,6 +24,9 @@
     <MASM Include="P_11_AreaRectangulo_.asm" />
     <MASM Include="P_12_IntroSaltosIncondicionales_.asm" />
     <MASM Include="P_13_SaltosCondicionales.asm" />
+    <MASM Include="P_14_NumeroPar_.asm" />
+    <MASM Include="P_15_ImprimirSerie_.asm" />
+    <MASM Include="P_16_XalaY_.asm" />
     <MASM Include="P_1_TransferenciaDatos.asm" />
     <MASM Include="P_2_IntroOpArit.asm" />
     <MASM Include="P_3_EscrituraEnPantalla.asm" />
@@ -112,7 +115,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main11</EntryPointSymbol>
+      <EntryPointSymbol>main16</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>
