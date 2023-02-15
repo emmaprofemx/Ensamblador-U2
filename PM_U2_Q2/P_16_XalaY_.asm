@@ -22,7 +22,6 @@ INCLUDE Irvine32.inc
 	main16 PROC
 	
 		;Lógica del Programa
-		
 		; x = 3 
 		; y = 4 
 		; x elevada a la 4 

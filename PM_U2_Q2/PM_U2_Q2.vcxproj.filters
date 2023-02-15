@@ -24,6 +24,9 @@
     <MASM Include="P_14_NumeroPar_.asm" />
     <MASM Include="P_15_ImprimirSerie_.asm" />
     <MASM Include="P_16_XalaY_.asm" />
+    <MASM Include="P_17_Checar2Num_.asm" />
+    <MASM Include="P_18_LeerHastaNegativos_.asm" />
+    <MASM Include="P_19_IntroPila_.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
