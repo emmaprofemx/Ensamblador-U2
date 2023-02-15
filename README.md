@@ -1,8 +1,8 @@
 # Ensamblador-U2
 
 Codigos de la Unidad :two: :
-* [EJ1-TransferenciaDatos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_1_TransferenciaDatos.asm)
-* [EJ2-IntroOpArit](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_2_IntroOpArit.asm)
+* [EJ1 - TransferenciaDatos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_1_TransferenciaDatos.asm)
+* [EJ2 - IntroOpArit](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_2_IntroOpArit.asm)
 * [EJ3 - Escritura en Pantalla](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_3_EscrituraEnPantalla.asm)
 * [EJ4 - Leer datos por consola](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_4_LeerDatosConsola.asm)
 * [EJ5 - Imprime Cadena en consola](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_5_ImprimeCadenenconsola.asm)
