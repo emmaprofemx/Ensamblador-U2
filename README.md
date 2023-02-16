@@ -14,6 +14,9 @@ Codigos de la Unidad :two: :
 * [EJ14 - Numero Par](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_14_NumeroPar_.asm)
 * [EJ15 - Imprimir Serie](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_15_ImprimirSerie_.asm)
 * [EJ16 - x^y](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_16_XalaY_.asm)
+* [EJ17 - A Y B mayor](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_17_Checar2Num_.asm#L19)
+* [EJ18 - Leer hasta numeros negativos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_18_LeerHastaNegativos_.asm)
+* [EJ19 - Intro Pila](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_19_IntroPila_.asm)
 
 Practicas hechas en clase: 
 * [P1-Ecuacion Linea Recta](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_9_EcuacionLineaRecta.asm)
