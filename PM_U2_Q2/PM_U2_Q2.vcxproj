@@ -31,6 +31,9 @@
     <MASM Include="P_18_LeerHastaNegativos_.asm" />
     <MASM Include="P_19_IntroPila_.asm" />
     <MASM Include="P_1_TransferenciaDatos.asm" />
+    <MASM Include="P_20_CiclosAnidados1_.asm" />
+    <MASM Include="P_21_TablaMultiplicar.asm" />
+    <MASM Include="P_22_TablaMultiplicarConPila.asm" />
     <MASM Include="P_2_IntroOpArit.asm" />
     <MASM Include="P_3_EscrituraEnPantalla.asm" />
     <MASM Include="P_4_LeerDatosConsola.asm" />
@@ -118,7 +121,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main19</EntryPointSymbol>
+      <EntryPointSymbol>main22</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>
