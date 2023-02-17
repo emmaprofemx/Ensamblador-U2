@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="Ejercicio_5_SumaHastaNeg.asm" />
+    <MASM Include="Ej_4_LeerNumerosPositivos.asm" />
     <MASM Include="P_0_plantilla.asm" />
     <MASM Include="P_10_Promedio5Numeros.asm" />
     <MASM Include="P_11_AreaRectangulo_.asm" />
@@ -121,7 +123,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main22</EntryPointSymbol>
+      <EntryPointSymbol>main24</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>

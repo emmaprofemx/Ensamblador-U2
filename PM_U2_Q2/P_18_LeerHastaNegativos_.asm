@@ -24,11 +24,10 @@ INCLUDE Irvine32.inc
 		;Lógica del Programa
 
 		ciclo:
-
 		call readint ; eax
 		cmp eax, 0
 		jge ciclo
-		
+		call writeint
 
 
 	    exit
