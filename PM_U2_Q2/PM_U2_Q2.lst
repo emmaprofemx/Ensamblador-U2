@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/16/23 20:53:08
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/22/23 02:42:25
 NombreProgram						     Page 1 - 1
 
 
@@ -37,35 +37,134 @@ Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/16/23 20:53:08
 				; Área de Declaración de Variables
 
 
+ 00000000 49 6E 67 72 65	msj1_ejt1 db "Ingresa la altura: ", 0
+	   73 61 20 6C 61
+	   20 61 6C 74 75
+	   72 61 3A 20 00
+ 00000014 49 6E 67 72 65	msj2_ejt1 db "Ingresa la base: ", 0
+	   73 61 20 6C 61
+	   20 62 61 73 65
+	   3A 20 00
+ 00000026 4C 61 20 73 75	msj3_ejt1 db "La suma total es:  ", 0
+	   6D 61 20 74 6F
+	   74 61 6C 20 65
+	   73 3A 20 20 00
+
+
 
  00000000			.code
 
- 00000000				main24 PROC
+ 00000000				main36 PROC
 					
 						;Lógica del Programa
-						;Realizar la sumatoria de todos los numeros que sean ingresados
-						;hasta que se ingrese un numero negativo.El negativo no se suma.
-
- 00000000  BB 00000000				mov ebx , 0
- 00000005					ciclo:
- 00000005  E8 00000000 E			call readint; eax
- 0000000A  03 D8				add ebx , eax 
- 0000000C  83 F8 00				cmp eax, 0
- 0000000F  7D F4				jge ciclo
-
- 00000011  2B D8				sub ebx , eax
- 00000013  8B C3				mov eax , ebx
 						
- 00000015  E8 00000000 E			call writedec
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						;
+						;
+						;
+						;
 
-						; call writedec
+						
+						
+						;******MENSAJE 1******
+ 00000000  BA 00000000 R		    mov edx, offset msj1_ejt1 
+ 00000005  E8 00000000 E			call writestring
+ 0000000A  E8 00000000 E			call crlf 
+ 0000000F  E8 00000000 E			call readint ; Leemos eax (BASE)
 
-					    exit
-
- 00000021				main24 ENDP
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						;
+						;
+						;
 					
-					END main24
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/16/23 20:53:08
+
+						
+						;*****MENSAJE 2*****
+ 00000014  BA 00000014 R			mov edx, offset msj2_ejt1
+ 00000019  E8 00000000 E			call writestring
+ 0000001E  E8 00000000 E			call crlf 
+ 00000023  8B D8				mov ebx , eax 
+
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						; 0    20   0    MS2
+						;
+						;
+ 00000025  E8 00000000 E			call readint ;LEEMOS EAX (Horas trabajadas)
+
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						; 0    20   0    MS2
+						; 8    20   0    N/A
+						;
+
+ 0000002A  F7 E3				mul ebx ; EAX = EAX * EBX (SE GUARDARA EN EAX)
+						
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						; 0    20   0    MS2
+						; 8    20   0    N/A
+						;160	0	0	 N/A	
+
+ 0000002C  BA 00000000				MOV EDX , 0 ;PARA GUARDAR EL RESIDUO
+						;_HASTA ESTE PUNTO ECX , NO CUENTA CON ALGUN VALOR DE UTILIDAD
+
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						; 0    20   0    MS2
+						; 8    20   0    N/A
+						;160	0	0	 0(Es para guardar el residuo)
+
+ 00000031  8B D8				mov ebx , eax
+
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						; 0    20   0    MS2
+						; 8    20   0    N/A
+						; 0	  160	0	 0(Es para guardar el residuo)
+
+						;EN ESTE SENTIDO , SE PUEDE UTILIZAR EBX , O ECX... SE ESCOGIO ECX..
+						
+ 00000033  B9 00000002				MOV ECX , 2 ; DE DIVIDE ENTRE 2
+						
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						; 0    20   0    MS2
+						; 8    20   0    N/A
+						;0	  160	2	 0(Es para guardar el residuo)
+
+ 00000038  F7 F1				DIV ECX ; COCIENTE SE GUARDA EN EAX 
+								; EAX = EAX / ECX
+						; eax  ebx  ecx  edx
+						; 0	   0	0	 N/A
+						; 20   0    0    MS1
+						; 0    20   0    MS2
+						; 8    20   0    N/A
+						;0	   160	2	 0(Es para guardar el residuo)
+						;80     0   0    0(Es para guardar el residuo)
+ 0000003A  E8 00000000 E			CALL WRITEINT ;IMPRIME EL RESULTADO DE CUALQUIER COSA QUE ESTE EN EAX
+ 0000003F  03 C3				add eax , ebx
+
+						;*****MENSAJE 2*****
+ 00000041  BA 00000026 R			mov edx, offset msj3_ejt1
+ 00000046  E8 00000000 E			call writestring
+ 0000004B  E8 00000000 E			call crlf 
+ 00000050  E8 00000000 E			CALL WRITEINT ;IMPRIME EL RESULTADO DE CUALQUIER COSA QUE ESTE EN EAX
+
+					exit	
+ 0000005C				main36 ENDP
+					
+					END main36
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/22/23 02:42:25
 NombreProgram						     Symbols 2 - 1
 
 
@@ -159,8 +258,8 @@ Segments and Groups:
 
 FLAT . . . . . . . . . . . . . .	GROUP
 STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
-_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'DATA'	
-_TEXT  . . . . . . . . . . . . .	32 Bit	 00000021 Para	  Public  'CODE'	
+_DATA  . . . . . . . . . . . . .	32 Bit	 0000003A Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000005C Para	  Public  'CODE'	
 
 
 Procedures, parameters, and locals:
@@ -267,8 +366,7 @@ WriteStackFrame  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External
 WriteString  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteToFile  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteWindowsMsg  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
-main24 . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000021 Public STDCALL
-  ciclo  . . . . . . . . . . . .	L Near	 00000005 _TEXT	
+main36 . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000005C Public STDCALL
 printf . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 scanf  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 wsprintfA  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
@@ -501,6 +599,9 @@ lightGreen . . . . . . . . . . .	Number	 0000000Ah
 lightMagenta . . . . . . . . . .	Number	 0000000Dh   
 lightRed . . . . . . . . . . . .	Number	 0000000Ch   
 magenta  . . . . . . . . . . . .	Number	 00000005h   
+msj1_ejt1  . . . . . . . . . . .	Byte	 00000000 _DATA	
+msj2_ejt1  . . . . . . . . . . .	Byte	 00000014 _DATA	
+msj3_ejt1  . . . . . . . . . . .	Byte	 00000026 _DATA	
 red  . . . . . . . . . . . . . .	Number	 00000004h   
 white  . . . . . . . . . . . . .	Number	 0000000Fh   
 wsprintf . . . . . . . . . . . .	Text   	 wsprintfA

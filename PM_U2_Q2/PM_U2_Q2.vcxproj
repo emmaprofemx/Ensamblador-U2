@@ -19,8 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="Ej6.asm" />
+    <MASM Include="EJ7.asm" />
     <MASM Include="Ejercicio_5_SumaHastaNeg.asm" />
     <MASM Include="Ej_4_LeerNumerosPositivos.asm" />
+    <MASM Include="ET_7_Autobuses.asm" />
+    <MASM Include="ET_1_Areas.asm" />
+    <MASM Include="ET_3_Sueldo.asm" />
+    <MASM Include="ET_4_Edad.asm" />
+    <MASM Include="ET_6_Pinturas.asm" />
+    <MASM Include="ET_8_CONAGUA.asm" />
+    <MASM Include="ET_9_CFE.asm" />
     <MASM Include="P_0_plantilla.asm" />
     <MASM Include="P_10_Promedio5Numeros.asm" />
     <MASM Include="P_11_AreaRectangulo_.asm" />
@@ -123,7 +132,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main24</EntryPointSymbol>
+      <EntryPointSymbol>main36</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>

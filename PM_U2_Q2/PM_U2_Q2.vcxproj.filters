@@ -32,6 +32,31 @@
     <MASM Include="P_22_TablaMultiplicarConPila.asm" />
     <MASM Include="Ej_4_LeerNumerosPositivos.asm" />
     <MASM Include="Ejercicio_5_SumaHastaNeg.asm" />
+    <MASM Include="Ej6.asm" />
+    <MASM Include="EJ7.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
+    <MASM Include="ET_4_Edad.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
+    <MASM Include="ET_6_Pinturas.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
+    <MASM Include="ET_7_Autobuses.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
+    <MASM Include="ET_8_CONAGUA.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
+    <MASM Include="ET_9_CFE.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
+    <MASM Include="ET_3_Sueldo.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
+    <MASM Include="ET_1_Areas.asm">
+      <Filter>EjerciciosUN2</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
@@ -39,6 +64,9 @@
   <ItemGroup>
     <Filter Include="Practicas">
       <UniqueIdentifier>{506326e3-494e-4002-86d6-caf4f32ee2aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EjerciciosUN2">
+      <UniqueIdentifier>{787068b0-6ac2-44cf-8b9a-5bafc9fe86c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

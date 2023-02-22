@@ -40,7 +40,7 @@ INCLUDE Irvine32.inc
 		; jl = salta si es menor
 		; jg =  salta si es mayor
 
-		; jnz = salata si bi es cero / salta si no es igual
+		; jnz = salata si no es cero / salta si no es igual
 		; jne = salta si no es igual
 		; jnl = salta si no es menor
 		; jng = salta si no es mayor

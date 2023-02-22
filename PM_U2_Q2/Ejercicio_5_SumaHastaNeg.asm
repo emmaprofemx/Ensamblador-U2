@@ -14,9 +14,6 @@ INCLUDE Irvine32.inc
 
 .data
 ; Área de Declaración de Variables
-
-
-
 .code
 
 	main24 PROC
@@ -26,6 +23,8 @@ INCLUDE Irvine32.inc
 		;hasta que se ingrese un numero negativo.El negativo no se suma.
 
 		mov ebx , 0
+
+		;*******CICLO******
 		ciclo:
 		call readint; eax
 		add ebx , eax 
@@ -41,7 +40,8 @@ INCLUDE Irvine32.inc
 
 
 		;SOLICITAR EL VALOR DE X , PEDIR AL USUARIO INGRESAR TANTOS VALORES SEAN MENORES QUE X
-	    exit
+	    
+		exit
 
 	main24 ENDP
 	

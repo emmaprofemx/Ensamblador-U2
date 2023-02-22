@@ -24,7 +24,7 @@ var1_6 dword 10d
 	
 		;Lógica del Programa
 
-         ;sub se rige por las mismas restricciones que mov
+         ; sub se rige por las mismas restricciones que mov
 		 ; en cuanto a los operandos
 
 		 ; mem a reg a la memria se le resta el registro
