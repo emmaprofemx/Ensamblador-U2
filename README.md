@@ -27,7 +27,6 @@ Practicas hechas en clase:
 * [P3-Area Rectangulo](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_11_AreaRectangulo_.asm)
 * [P4-Leer numeros positivos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ej_4_LeerNumerosPositivos.asm)
 * [P5-Sumar hasta negativos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ejercicio_5_SumaHastaNeg.asm)
-* [P5-Sumar hasta negativos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ejercicio_5_SumaHastaNeg.asm)
 * [P6-Solicitar X y ingresar menores que X](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ej6.asm)
 
 Anotaciones de la materia
