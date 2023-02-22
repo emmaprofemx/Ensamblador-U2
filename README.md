@@ -25,6 +25,8 @@ Practicas hechas en clase:
 * [P1-Ecuacion Linea Recta](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_9_EcuacionLineaRecta.asm)
 * [P2-Promedio de 5 numeros](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_10_Promedio5Numeros.asm)
 * [P3-Area Rectangulo](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_11_AreaRectangulo_.asm)
-
-
+* [P4-Leer numeros positivos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ej_4_LeerNumerosPositivos.asm)
+* [P5-Sumar hasta negativos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ejercicio_5_SumaHastaNeg.asm)
+* [P5-Sumar hasta negativos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ejercicio_5_SumaHastaNeg.asm)
+* [P6-Solicitar X y ingresar menores que X](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ej6.asm)
 Anotaciones de la materia
