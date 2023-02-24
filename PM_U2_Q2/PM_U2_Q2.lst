@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/23/23 19:05:24
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/24/23 01:44:51
 NombreProgram						     Page 1 - 1
 
 
@@ -36,74 +36,141 @@ Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/23/23 19:05:24
  00000000			.data
 				; Área de Declaración de Variables
 
- 00000000 69 6E 67 72 65	message1 db "ingresa m: " , 0 ; mensaje
-	   73 61 20 6D 3A
+ 00000000 49 6E 67 72 65			msj1_ej db "Ingrese x1 ", 0
+	   73 65 20 78 31
 	   20 00
- 0000000C 69 6E 67 72 65	message2 db "ingresa x: " , 0 ; mensaje
-	   73 61 20 78 3A
+ 0000000C 49 6E 67 72 65			msj2_ej db "Ingrese x2 ", 0
+	   73 65 20 78 32
 	   20 00
- 00000018 69 6E 67 72 65	message3 db "ingresa b: " , 0 ; mensaje
-	   73 61 20 62 3A
+ 00000018 49 6E 67 72 65			msj3_ej db "Ingrese y1 ", 0
+	   73 65 20 79 31
 	   20 00
- 00000024 65 6C 20 76 61	message4 db "el valor de y: " , 0 ; mensaje
-	   6C 6F 72 20 64
-	   65 20 79 3A 20
-	   00
-
-
-
-
+ 00000024 49 6E 67 72 65			msj4_ej db "Ingrese y2 ", 0
+	   73 65 20 79 32
+	   20 00
  00000000			.code
 
- 00000000				main9 PROC
+ 00000000				main92 PROC
 					
 						;Lógica del Programa
+					
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+
+						;*******MENSAJE 1*******
+ 00000000  BA 00000000 R			mov edx, OFFSET msj1_ej
+ 00000005  E8 00000000 E			call writestring
+ 0000000A  E8 00000000 E			call crlf
+
+ 0000000F  E8 00000000 E			call readint ; leyendo el valor = 2
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+ 00000014  8B D8				mov ebx, eax
+
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+
+						;*******MENSAJE 2*******
+ 00000016  BA 0000000C R			mov edx, OFFSET msj2_ej
+ 0000001B  E8 00000000 E			call writestring
+ 00000020  E8 00000000 E			call crlf
+
+ 00000025  E8 00000000 E			call readint ; leyendo el valor = -7
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+						; -7   2    0    ms2
+						;
+ 0000002A  2B C3				sub eax,ebx
+
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+						; -7   2    0    ms2
+						; -5   0    0     0
+ 0000002C  E8 00000000 E			call writeint ; DEBE DE MOSTRAR -5
+
+ 00000031  8B C8				mov ecx , eax
+
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+						; -7   2    0    ms2
+						; -5   0    0     0
+						;  0   0    -5    0
 						
-							;mensaje - 1
- 00000000  BA 00000000 R				mov edx , offset message1 ;mostrando mensaje p1
- 00000005  E8 00000000 E				call writestring ; mostrando mensaje p2
- 0000000A  E8 00000000 E				call crlf ; salto de linea
- 0000000F  E8 00000000 E				call readint    ; readint almacena en eax
- 00000014  8B C8					mov ecx , eax   ; respaldar en ecx el valor de eax
+						;*******MENSAJE 3*******
+ 00000033  BA 00000018 R			mov edx, OFFSET msj3_ej
+ 00000038  E8 00000000 E			call writestring
+ 0000003D  E8 00000000 E			call crlf
+ 00000042  E8 00000000 E			call readint ; LEEMOS EL VALOR DE Y1 = 8
 
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+						; -7   2    0    ms2
+						; -5   0    0     0
+						;  0   0    -5    0
+						; 8    0    -5   ms3
+ 00000047  8B D8				mov ebx , eax
 
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+						; -7   2    0    ms2
+						; -5   0    0     0
+						;  0   0    -5    0
+						;  8   0    -5   ms3
+						;  0   8    -5    0
 
-							;Mostrar un mensaje - 2
- 00000016  BA 0000000C R				mov edx , offset message2 ;mostrando mensaje p1
- 0000001B  E8 00000000 E				call writestring ; mostrando mensaje p2
- 00000020  E8 00000000 E				call crlf ; salto de linea
- 00000025  E8 00000000 E				call readint   
-							
- 0000002A  F7 E1					mul ecx   ;  eax que multiplica a exc =  a m que multiplica a x 
- 0000002C  8B C8					mov ecx , eax
+						;*******MENSAJE 4*******
+ 00000049  BA 00000024 R			mov edx, OFFSET msj4_ej
+ 0000004E  E8 00000000 E			call writestring
+ 00000053  E8 00000000 E			call crlf
+ 00000058  E8 00000000 E			call readint ; LEEMOS EL VALOR DE Y2 = 3
 
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+						; -7   2    0    ms2
+						; -5   0    0     0
+						;  0   0    -5    0
+						;  8   0    -5   ms3
+						;  0   8    -5    0
+						; 3    8    -5    ms4
 
+ 0000005D  2B C3				sub eax, ebx
 
-							;Mostrar un mensaje - 3
- 0000002E  BA 00000018 R				mov edx , offset message3 
- 00000033  E8 00000000 E				call writestring
- 00000038  E8 00000000 E				call crlf ; salto de linea
-							
- 0000003D  E8 00000000 E				call readint ; valor de b
+						; eax  ebx  ecx  edx
+						; 0	   0	0	  0
+						; 2    0    0    ms1
+						; 0    2    0     0
+						; -7   2    0    ms2
+						; -5   0    0     0
+						;  0   0    -5    0
+						;  8   0    -5   ms3
+						;  0   8    -5    0
+						; 3    8    -5    ms4
+						; 5    0    -5    0
 
- 00000042  03 C1					add eax , ecx  ;para imprimir el resultado SIEMPRE TIENE QUE ESTAR EN EAX
+ 0000005F  03 C1				add eax , ecx
 
-
-							;Mostrar un mensaje - 4
- 00000044  BA 00000024 R				mov edx , offset message4 
- 00000049  E8 00000000 E				call writestring
- 0000004E  E8 00000000 E				call crlf ; salto de linea
-							
- 00000053  E8 00000000 E				call writeint ;IMPRIMIMOS EL VALOR FINAL
-
-
-
+ 00000061  E8 00000000 E			call writeint ; debe mostrar 0
 						exit	
 					
- 0000005F				main9 ENDP
+ 0000006D				main92 ENDP
 					
-					END main9
-Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/23/23 19:05:24
+					END main92
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    02/24/23 01:44:51
 NombreProgram						     Symbols 2 - 1
 
 
@@ -197,8 +264,8 @@ Segments and Groups:
 
 FLAT . . . . . . . . . . . . . .	GROUP
 STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
-_DATA  . . . . . . . . . . . . .	32 Bit	 00000034 Para	  Public  'DATA'	
-_TEXT  . . . . . . . . . . . . .	32 Bit	 0000005F Para	  Public  'CODE'	
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000030 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000006D Para	  Public  'CODE'	
 
 
 Procedures, parameters, and locals:
@@ -305,7 +372,7 @@ WriteStackFrame  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External
 WriteString  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteToFile  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
 WriteWindowsMsg  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
-main9  . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000005F Public STDCALL
+main92 . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000006D Public STDCALL
 printf . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 scanf  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
 wsprintfA  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
@@ -538,10 +605,10 @@ lightGreen . . . . . . . . . . .	Number	 0000000Ah
 lightMagenta . . . . . . . . . .	Number	 0000000Dh   
 lightRed . . . . . . . . . . . .	Number	 0000000Ch   
 magenta  . . . . . . . . . . . .	Number	 00000005h   
-message1 . . . . . . . . . . . .	Byte	 00000000 _DATA	
-message2 . . . . . . . . . . . .	Byte	 0000000C _DATA	
-message3 . . . . . . . . . . . .	Byte	 00000018 _DATA	
-message4 . . . . . . . . . . . .	Byte	 00000024 _DATA	
+msj1_ej  . . . . . . . . . . . .	Byte	 00000000 _DATA	
+msj2_ej  . . . . . . . . . . . .	Byte	 0000000C _DATA	
+msj3_ej  . . . . . . . . . . . .	Byte	 00000018 _DATA	
+msj4_ej  . . . . . . . . . . . .	Byte	 00000024 _DATA	
 red  . . . . . . . . . . . . . .	Number	 00000004h   
 white  . . . . . . . . . . . . .	Number	 0000000Fh   
 wsprintf . . . . . . . . . . . .	Text   	 wsprintfA

@@ -124,3 +124,8 @@ msj3_ejt1 db "La suma total es:  ", 0
 	main36 ENDP
 	
 	END main36
+
+
+	
+		
+

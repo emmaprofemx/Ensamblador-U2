@@ -24,6 +24,7 @@
     <MASM Include="EJ7.asm" />
     <MASM Include="Ejercicio_5_SumaHastaNeg.asm" />
     <MASM Include="Ej_4_LeerNumerosPositivos.asm" />
+    <MASM Include="ET2_PR2_Manhattan.asm" />
     <MASM Include="ETPB_2_Manhattan.asm" />
     <MASM Include="ET_7_Autobuses.asm" />
     <MASM Include="ET_1_Areas.asm" />
@@ -134,7 +135,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main41</EntryPointSymbol>
+      <EntryPointSymbol>main92</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>

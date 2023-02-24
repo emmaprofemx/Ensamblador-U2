@@ -61,6 +61,7 @@
       <Filter>EjerciciosUN2</Filter>
     </MASM>
     <MASM Include="ETPB_2_Manhattan.asm" />
+    <MASM Include="ET2_PR2_Manhattan.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
