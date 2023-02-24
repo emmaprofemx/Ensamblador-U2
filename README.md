@@ -30,5 +30,13 @@ Practicas hechas en clase:
 * [P6-Solicitar X y ingresar menores que X](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ej6.asm)
 
  Ejercicios de Tarea:
- 
+ * [ET1-Areas](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_1_Areas.asm)
+ * [ET2-Mahhatan](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ETPB_2_Manhattan.asm)
+ * [ET3-Sueldo](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_3_Sueldo.asm)
+ * [ET4-Edad](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_4_Edad.asm)
+ * [ET6-Pinturas](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_6_Pinturas.asm)
+ * [ET7-Autobuses](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_7_Autobuses.asm)
+ * [ET8-Calcular AGUA](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_8_CONAGUA.asm)
+ * [ET9-CFE XD](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_9_CFE.asm)
+
 Anotaciones de la materia
