@@ -34,6 +34,7 @@ totalPago_1_2 dword 0d
 		call writestring
 		call crlf 
 		call readint ; Leemos eax = 300
+
 		
 		;******MENSAJE 2******
 	    mov edx, offset msj2_et9

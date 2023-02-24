@@ -27,13 +27,21 @@ msj2_ej7 db "Horas trabajadas en la semana: ", 0
 	
 		;Lógica del Programa
 
+		; eax  ebx  ecx  edx
+		; 0	   0	0	 N/A
+
+
 		;******MENSAJE 1******
 	    mov edx, offset msj1_ej7 
 		call writestring
 		call crlf 
 		call readint ; Leemos eax (Pago x hora)
 		
-		
+		; eax  ebx  ecx  edx
+		; 0	   0	0	 N/A
+
+
+
 		;*****MENSAJE 2*****
 		mov edx, offset msj2_ej7
 		call writestring
