@@ -21,7 +21,7 @@ Codigos de la Unidad :two: :
 * [EJ21 - Tablas de Multiplicar](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_21_TablaMultiplicar.asm)
 * [EJ22 - Tablas de Multiplicar con pila](https://github.com/emmaprofemx/Ensamblador-U2/tree/main/PM_U2_Q2)
 
-Practicas hechas en clase: 
+Practicas hechas en clase :feelsgood: : 
 * [P1-Ecuacion Linea Recta](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_9_EcuacionLineaRecta.asm)
 * [P2-Promedio de 5 numeros](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_10_Promedio5Numeros.asm)
 * [P3-Area Rectangulo](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/P_11_AreaRectangulo_.asm)
@@ -29,7 +29,7 @@ Practicas hechas en clase:
 * [P5-Sumar hasta negativos](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ejercicio_5_SumaHastaNeg.asm)
 * [P6-Solicitar X y ingresar menores que X](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/Ej6.asm)
 
- Ejercicios de Tarea:
+ Ejercicios de Tarea :shipit: :books::
  * [ET1-Areas](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_1_Areas.asm)
  * [ET2-Mahhatan](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ETPB_2_Manhattan.asm)
  * [ET3-Sueldo](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_3_Sueldo.asm)
