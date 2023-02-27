@@ -36,6 +36,7 @@
     <MASM Include="ET_6_Pinturas.asm" />
     <MASM Include="ET_8_CONAGUA.asm" />
     <MASM Include="ET_9_CFE.asm" />
+    <MASM Include="IMPRIMIRNPARES_PR3_P2.asm" />
     <MASM Include="P_0_plantilla.asm" />
     <MASM Include="P_10_Promedio5Numeros.asm" />
     <MASM Include="P_11_AreaRectangulo_.asm" />
@@ -138,7 +139,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main73</EntryPointSymbol>
+      <EntryPointSymbol>main74</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>
