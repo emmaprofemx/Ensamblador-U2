@@ -38,5 +38,10 @@ Practicas hechas en clase :feelsgood: :
  * [ET7-Autobuses](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_7_Autobuses.asm)
  * [ET8-Calcular AGUA](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_8_CONAGUA.asm)
  * [ET9-CFE XD](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/ET_9_CFE.asm)
+ * [ET10 - FACTORIAL](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/EJPABLO_PR1_FACTORIAL.asm)
+ * [ET11 -FIBONACCI](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/EJEMMA_PR2_FIBONACCI.asm)
+ * [ET12 - IMPRIMIR N PARES](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/IMPRIMIRNPARES_PR3_P2.asm)
+ * [ET13 - DISCRIMINANTE](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/EJEMMA_PR4_DISCRIMINANTE.asm)
+ * [ET14 - PORCENTAJE](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/EJPABLO_PR5_PORCENTAJE.asm)
 
 Anotaciones de la materia
