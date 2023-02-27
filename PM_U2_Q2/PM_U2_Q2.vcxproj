@@ -22,6 +22,9 @@
     <MASM Include="EJ2_Manhattan.asm" />
     <MASM Include="Ej6.asm" />
     <MASM Include="EJ7.asm" />
+    <MASM Include="EJEMMA_PR2_FIBONACCI.asm" />
+    <MASM Include="EJEMMA_PR3_PARES.asm" />
+    <MASM Include="EJEMMA_PR4_DISCRIMINANTE.asm" />
     <MASM Include="Ejercicio_5_SumaHastaNeg.asm" />
     <MASM Include="Ej_4_LeerNumerosPositivos.asm" />
     <MASM Include="ET2_PR2_Manhattan.asm" />
@@ -135,7 +138,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main92</EntryPointSymbol>
+      <EntryPointSymbol>main73</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>

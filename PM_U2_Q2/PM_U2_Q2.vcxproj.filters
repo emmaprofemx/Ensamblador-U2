@@ -62,6 +62,15 @@
     </MASM>
     <MASM Include="ETPB_2_Manhattan.asm" />
     <MASM Include="ET2_PR2_Manhattan.asm" />
+    <MASM Include="EJEMMA_PR4_DISCRIMINANTE.asm">
+      <Filter>EJERCICIOSPT22</Filter>
+    </MASM>
+    <MASM Include="EJEMMA_PR2_FIBONACCI.asm">
+      <Filter>EJERCICIOSPT22</Filter>
+    </MASM>
+    <MASM Include="EJEMMA_PR3_PARES.asm">
+      <Filter>EJERCICIOSPT22</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
@@ -72,6 +81,9 @@
     </Filter>
     <Filter Include="EjerciciosUN2">
       <UniqueIdentifier>{787068b0-6ac2-44cf-8b9a-5bafc9fe86c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EJERCICIOSPT22">
+      <UniqueIdentifier>{02e57720-2950-4523-ae27-e6e9c3991bae}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
