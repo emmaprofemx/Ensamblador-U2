@@ -72,6 +72,21 @@
       <Filter>EJERCICIOSPT22</Filter>
     </MASM>
     <MASM Include="IMPRIMIRNPARES_PR3_P2.asm" />
+    <MASM Include="EJPABLO_PR1_FACTORIAL.asm">
+      <Filter>EJERCICIOSPT22</Filter>
+    </MASM>
+    <MASM Include="EJPABLO_PR5_PORCENTAJE.asm">
+      <Filter>EJERCICIOSPT22</Filter>
+    </MASM>
+    <MASM Include="EJ23-CICLOSANIDADOSCONPILA.asm" />
+    <MASM Include="Unidad3_primerejercicio_macros_.asm" />
+    <MASM Include="Unidad3_segundoejercicio_.asm" />
+    <MASM Include="Unidad3_tercerjercicio_.asm" />
+    <MASM Include="Unidad3_cuartojercicio_.asm" />
+    <MASM Include="Unidad3_quintoejercicio.asm" />
+    <MASM Include="Unidad3_sextoejercicio.asm" />
+    <MASM Include="Unidad3_septimoejercicio.asm" />
+    <MASM Include="Unidad3_octavoejercicio.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />

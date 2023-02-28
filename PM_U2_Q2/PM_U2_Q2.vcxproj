@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="EJ23-CICLOSANIDADOSCONPILA.asm" />
     <MASM Include="EJ2_Manhattan.asm" />
     <MASM Include="Ej6.asm" />
     <MASM Include="EJ7.asm" />
@@ -26,6 +27,8 @@
     <MASM Include="EJEMMA_PR3_PARES.asm" />
     <MASM Include="EJEMMA_PR4_DISCRIMINANTE.asm" />
     <MASM Include="Ejercicio_5_SumaHastaNeg.asm" />
+    <MASM Include="EJPABLO_PR1_FACTORIAL.asm" />
+    <MASM Include="EJPABLO_PR5_PORCENTAJE.asm" />
     <MASM Include="Ej_4_LeerNumerosPositivos.asm" />
     <MASM Include="ET2_PR2_Manhattan.asm" />
     <MASM Include="ETPB_2_Manhattan.asm" />
@@ -60,6 +63,14 @@
     <MASM Include="P_7_Multiplicacion_.asm" />
     <MASM Include="P_8_Division_.asm" />
     <MASM Include="P_9_EcuacionLineaRecta.asm" />
+    <MASM Include="Unidad3_cuartojercicio_.asm" />
+    <MASM Include="Unidad3_octavoejercicio.asm" />
+    <MASM Include="Unidad3_primerejercicio_macros_.asm" />
+    <MASM Include="Unidad3_quintoejercicio.asm" />
+    <MASM Include="Unidad3_segundoejercicio_.asm" />
+    <MASM Include="Unidad3_septimoejercicio.asm" />
+    <MASM Include="Unidad3_sextoejercicio.asm" />
+    <MASM Include="Unidad3_tercerjercicio_.asm" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="..\..\..\..\..\..\Irvine\Lib32\Irvine32_Library\Irvine32.obj" />
@@ -139,7 +150,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>main74</EntryPointSymbol>
+      <EntryPointSymbol>main90</EntryPointSymbol>
     </Link>
     <MASM>
       <IncludePaths>c:/Irvine</IncludePaths>

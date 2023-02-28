@@ -177,6 +177,7 @@ var3 dword 2d
 			jg repite  ; es la reaccion como si fuera un if
 
 			;call writedec
+			
 
 			
 		sub eax, var2

@@ -23,7 +23,7 @@ msj2_ej db "El factorial del numero ingresado es: ", 0
 .code
 
 	main81 PROC
-	
+
 		;Lógica del Programa
 
 		;****mensaje 1
@@ -34,7 +34,7 @@ msj2_ej db "El factorial del numero ingresado es: ", 0
 		call readint ; leyendo el valor
 
 		mov ebx, eax
-	    
+
 
 	  mov ecx, ebx
 	  dec ecx ; = 4
@@ -57,9 +57,9 @@ msj2_ej db "El factorial del numero ingresado es: ", 0
 		exit
 
 
-		
-		
+
+
 
 	main81 ENDP
-	
+
 	END main81

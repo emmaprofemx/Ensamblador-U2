@@ -17,16 +17,16 @@ INCLUDE Irvine32.inc
 
 
 msg1_14 db "Ingresa un número: ",0 
-msgPar_14 db "Es PAR ",0 
-msg3_14 db "Los números pares en el rango son: ", 0
+
 
 ;CONSTANTES
 
 .code
 
-	main73 PROC
+	main94 PROC
 	
-		;Lógica del Programa
+	;Lógica del Programa
+
 	; Solicitar al usuario un número
 	mov edx, offset msg1_14
 	call writestring
@@ -34,34 +34,21 @@ msg3_14 db "Los números pares en el rango son: ", 0
 
 	call readint ; Almacenar el número ingresado por el usuario en eax
 
-	; Mostrar los números pares en el rango de 1 a n
-	mov ecx, 1 ; Inicializar el contador en 1
+	mov ebx , eax 
 
-
-whileloop:
-	; Verificar si el número actual es par
-	mov ebx, 2
-	mov edx, 0
-	;mov eax, ecx
-	div ebx ; eax/2 => cociente se va a eax y el residuo a edx
-
-	cmp edx, 0 ; revisa si el residuo es 0
-	jnz noPar ; si el número no es par, saltar a noPar
-
-	; Si el número es par, mostrarlo
-	call writeDec ; Mostrar el número actual
+	mov eax , 2
+	mov edx , 0 
 	call crlf
 
-	jmp salir
+	loopoo:
+	call writedec
+	call crlf
+	add eax , 2
+	inc edx
+	cmp edx , ebx
+	jl loopoo
 
-	noPar:
-	inc ecx; ;INCREMENTA EN UNO
-	cmp ecx , eax
-	jle whileloop
-	
-
-	salir:
 	exit	
-	main73 ENDP
+	main94 ENDP
 	
-	END main73
+	END main94
