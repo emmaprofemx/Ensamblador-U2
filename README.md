@@ -47,4 +47,5 @@ Practicas hechas en clase :feelsgood: :
  * [ET13 - DISCRIMINANTE](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/EJEMMA_PR4_DISCRIMINANTE.asm)
  * [ET14 - PORCENTAJE](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/EJPABLO_PR5_PORCENTAJE.asm)
 
-Anotaciones de la materia
+**PROYECTO DE UNIDAD** :finnadie:
+* [PROYECTO](https://github.com/emmaprofemx/Ensamblador-U2/blob/main/PM_U2_Q2/proyecto_multiplicaciones.asm)
