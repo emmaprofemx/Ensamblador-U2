@@ -20,7 +20,7 @@ INCLUDE Irvine32.inc
 var1 dword 100d
 .code
 
-	main87 PROC
+	main501 PROC
 	
 		;Lógica del Programa
 	    
@@ -41,6 +41,6 @@ var1 dword 100d
 		
 		
 
-	main87 ENDP
+	main501 ENDP
 	
-	END main87
+	END main501
