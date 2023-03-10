@@ -17,10 +17,12 @@ INCLUDE Irvine32.inc
 msg1 db "Ingrese un numero: ",0
 msg2 db " x ",0
 msg3 db " = ",0
-msg4 db "Respuesta: ",0
 msg5 db "¡Correcto!",0
-msg6 db "Incorrecto, intente nuevamente.",0
-msg7 db "se acabo el juego ya se te acabaron las vidas:(",0
+msg6 db "Incorrecto, intenta nuevamente.",0
+msg7 db "Te quedan : ",0
+msg8 db " oportunidades",0
+msg9 db "se acabo el juego se te acabaron las vidas",0
+msg10 db "Muy bien haz acabado todas las multiplicaciones!!",0
 num DWORD 0
 resultado DWORD 0d
 respuesta DWORD 0d
@@ -51,8 +53,7 @@ mientras:
     mov edx, OFFSET msg3 ; Imprime el "="
     call WriteString
     
-    mov edx, OFFSET msg4 ; Pide al usuario que ingrese la respuesta
-    call WriteString
+    
     call ReadInt ; Lee la respuesta ingresada por el usuario se guarda en eax
 
     cmp eax, resultado
@@ -63,7 +64,7 @@ mientras:
     add ecx, 1 ; Incrementa el contador
     cmp ecx, 11 ; Compara el contador con 11 (10 veces)
     jne mientras ; Si el contador es menor a 11, repite el ciclo
-    jmp salir
+    jmp fin_juego
 
     incorrecto:
     mov edx, OFFSET msg6 ;
@@ -71,19 +72,31 @@ mientras:
     call crlf
     dec vidas
     mov eax , vidas
-    call writedec
-    call crlf
-    cmp vidas , 0
-    je salir
 
-    jne mientras ;  Si el contador es menor a 11, repite el ciclo
-  
-    salir:
     mov edx, OFFSET msg7 ;
     call WriteString
-    exit
+    call writedec
+    mov edx, OFFSET msg8 ;
+    call WriteString
+    call crlf
+    call crlf
+    cmp vidas , 0
+    je msg_vidas_agotadas
+    jne mientras ;  Si el contador es menor a 11, repite el ciclo
+  
+    msg_vidas_agotadas:
+    mov edx, OFFSET msg9 ;
+    call WriteString  
+    jmp salir
+
+  fin_juego:
+    mov edx, OFFSET msg10 ;
+    call WriteString 
+    
    
-     
+  salir:
+  exit
+  
 	
 main107 ENDP
 END main107
