@@ -14,19 +14,19 @@ INCLUDE Irvine32.inc
 
 .data
 ; Área de Declaración de Variables
-msg1 db "Ingrese un numero: ",0
+msg1 db "Ingrese que tabla de multiplicar desea contestar: ",0
 msg2 db " x ",0
 msg3 db " = ",0
 msg5 db "¡Correcto!",0
 msg6 db "Incorrecto, intenta nuevamente.",0
-msg7 db "Te quedan : ",0
+msg7 db "llevas: ",0
 msg8 db " oportunidades",0
-msg9 db "se acabo el juego se te acabaron las vidas",0
 msg10 db "Muy bien haz acabado todas las multiplicaciones!!",0
+msg11 db "Quieres brincarte o deseas intentarlo nuevamente? (1 o 2): ",0
 num DWORD 0
 resultado DWORD 0d
 respuesta DWORD 0d
-vidas DWORD 5d
+vidas DWORD 0d
 
 .code
 main107 PROC
@@ -61,6 +61,9 @@ mientras:
     jne incorrecto
 
     correcto:
+    mov edx, OFFSET msg5
+    call WriteString
+    call crlf
     add ecx, 1 ; Incrementa el contador
     cmp ecx, 11 ; Compara el contador con 11 (10 veces)
     jne mientras ; Si el contador es menor a 11, repite el ciclo
@@ -70,7 +73,7 @@ mientras:
     mov edx, OFFSET msg6 ;
     call WriteString
     call crlf
-    dec vidas
+    inc vidas
     mov eax , vidas
 
     mov edx, OFFSET msg7 ;
@@ -80,14 +83,22 @@ mientras:
     call WriteString
     call crlf
     call crlf
-    cmp vidas , 0
-    je msg_vidas_agotadas
+    cmp vidas , 5
+    jg msg_pregunta
     jne mientras ;  Si el contador es menor a 11, repite el ciclo
   
-    msg_vidas_agotadas:
-    mov edx, OFFSET msg9 ;
-    call WriteString  
-    jmp salir
+    msg_pregunta:
+    mov edx, OFFSET msg11 ;
+    call WriteString 
+    call readint ; el usuario responde si quiere saltar la tabla o intentar nuevamente
+    
+    cmp eax, 1
+    je correcto ; si eligio que 1 se va a la etiqueta de correcto y salta a la siguiente multiplicacion
+
+    cmp eax,2 ; si eligio que 2 se va a la etiqueta de mientras y vuelve a preguntar la misma multiplicacion
+    je mientras
+
+    
 
   fin_juego:
     mov edx, OFFSET msg10 ;
